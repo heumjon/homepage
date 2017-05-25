@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+ 
+<mapper namespace="MenuList">
+
+	<select id="selectMenuList" parameterType="hashmap" resultType="hashmap">
+		SELECT MENU_ID
+			, MENU_NAME
+			, PROGRAM_NAME
+			, MENU_COMMENT
+			, CREATE_DATE
+		FROM TB_MENU
+	</select>
+	
+</mapper>

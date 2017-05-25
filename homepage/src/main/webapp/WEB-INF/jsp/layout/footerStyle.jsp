@@ -1,0 +1,20 @@
+<!-- END LOCATION  SECTION -->
+<!-- JAVASCRIPT FILES PLACED AT THE BOTTOM TO REDUCE THE LOADING TIME  -->
+<!-- CORE JQUERY  -->
+<script src="/assets/js/jquery-1.11.1.js"></script>
+<!-- BOOTSTRAP SCRIPTS  -->
+<script src="/assets/js/bootstrap.js"></script>
+<!-- PRETTYPHOTO SCRIPTS -->
+<script src="/assets/js/jquery.prettyPhoto.js"></script>
+<!-- PORTFOLIO FILTER PLUGIN  -->
+<script src="/assets/js/jquery.mixitup.min.js"></script>
+<!-- NICE SCROLL SCRIPTS   -->
+<script src="/assets/js/jquery.nicescroll.min.js"></script>
+<!-- EASING SCROLL SCRIPTS   -->
+<script src="/assets/js/jquery.easing.min.js"></script>
+<!-- CUSTOM SCRIPTS  -->
+<script src="/assets/js/custom.js"></script>
+<!-- SLIDER SCRIPTS  -->
+<script src="/assets/js/slider.js"></script>
+<!-- COMMON SCRIPTS  -->
+<script src="/assets/js/common.js"></script>

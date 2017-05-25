@@ -1,0 +1,262 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <title>AdminDesigns - A Responsive HTML5 Admin UI Framework</title>
+    <meta name="keywords" content="HTML5 Bootstrap 3 Admin Template UI Theme" />
+    <meta name="description" content="AdminDesigns - A Responsive HTML5 Admin UI Framework">
+    <meta name="author" content="AdminDesigns">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Font CSS (Via CDN) -->
+    <link rel='stylesheet' type='text/css' href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700'>
+
+    <!-- Theme CSS -->
+    <link rel="stylesheet" type="text/css" href="/css/theme.css">
+
+    <!-- Admin Forms CSS -->
+    <link rel="stylesheet" type="text/css" href="/css/admin-forms.css">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="assets/img/favicon.ico">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body class="external-page sb-l-c sb-r-c">
+
+    <!-- Start: Main -->
+    <div id="main" class="animated fadeIn">
+
+        <!-- Start: Content-Wrapper -->
+        <section id="content_wrapper">
+
+            <!-- begin canvas animation bg -->
+            <div id="canvas-wrapper">
+                <canvas id="demo-canvas"></canvas>
+            </div>
+
+            <!-- Begin: Content -->
+            <section id="content" class="">
+
+                <div class="admin-form theme-info mw870" style="margin-top: 3%;" id="login1">
+
+                    <div class="row mb15 table-layout">
+
+                        <div class="col-xs-6 va-m pln">
+                            <a href="dashboard.html" title="Return to Dashboard">
+                                <img src="/img/logos/logo_white.png" title="AdminDesigns Logo" class="img-responsive w250">
+                            </a>
+                        </div>
+
+                        <div class="col-xs-6 text-right va-b pr5">
+                            <div class="login-links">
+                                <a href="<c:url value="/login/login.do"/>" class="" title="Sign In">로그인</a>
+                                <span class="text-white"> | </span>
+                                <a href="<c:url value="/login/loginRegiste.do"/>" class="active" title="Register">회원가입</a>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="panel panel-info mt10 br-n">
+
+                        <div class="panel-heading heading-border bg-white">
+                            <!-- <div class="section row mn">
+                                <div class="col-sm-4">
+                                    <a href="#" class="button btn-social facebook span-left mr5 btn-block">
+                                        <span>
+                                            <i class="fa fa-facebook"></i>
+                                        </span>Facebook</a>
+                                </div>
+                                <div class="col-sm-4">
+                                    <a href="#" class="button btn-social twitter span-left mr5 btn-block">
+                                        <span>
+                                            <i class="fa fa-twitter"></i>
+                                        </span>Twitter</a>
+                                </div>
+                                <div class="col-sm-4">
+                                    <a href="#" class="button btn-social googleplus span-left btn-block">
+                                        <span>
+                                            <i class="fa fa-google-plus"></i>
+                                        </span>Google+</a>
+                                </div>
+                            </div> -->
+                        </div>
+
+                        <form id="applicationForm" name="applicationForm" method="post">
+                            <div class="panel-body p25 bg-light">
+                                <div class="section-divider mt10 mb40">
+                                    <span>회원정보</span>
+                                </div>
+                                <!-- .section-divider -->
+
+								
+                                <div class="section row form-group">
+                                	
+                                	<label for="user_name" class="col-md-2 control-label field-label text-muted fs18 mb10">이름 : </label>
+                                    <div class="col-md-4">
+                                        <input type="text" name="user_name" id="user_name" class="gui-input" placeholder="한글명...">
+                                    </div>
+                                    <!-- end section -->
+
+									<label for="eng_name" class="col-md-2 control-label field-label text-muted fs18 mb10">영문 : </label>
+                                    <div class="col-md-4">
+                                        <input type="text" name="eng_name" id="eng_name" class="gui-input" placeholder="영문명...">
+                                    </div>
+                                    <!-- end section -->
+                                </div>
+                                <!-- end .section row section -->
+
+                                <div class="section row">
+                               		<label for="user_id" class="col-md-2 control-label field-label text-muted fs18 mb10"> 사용자 ID : </label>
+                                	<div class="col-md-10">
+	                                    <input type="text" name="user_id" id="user_id" class="gui-input" placeholder="사용할 ID를 입력하세요...">
+                                    </div>
+                                </div>
+                                <!-- end section -->
+                                
+
+                                <div class="section row">
+                                    <label for="email" class="col-md-2 control-label field-label text-muted fs18 mb10">이메일 : </label>
+                                    <div class="col-md-10">
+	                                    <div class="smart-widget sm-right smr-100">
+	                                        <input type="text" name="email" id="email" class="gui-input" placeholder="이메일...">
+	                                        <label for="email" class="button">@onestx.com</label>
+	                                    </div>
+                                    </div>
+                                    <!-- end .smart-widget section -->
+                                </div>
+                                <!-- end section -->
+                                
+                                <div class="section row">
+                                	<label for="birthday" class="col-md-2 control-label field-label text-muted fs18 mb10">생년월일 : </label>
+                                    <div class="col-md-4">
+                                        <input type="text" name="birthday" id="birthday" class="gui-input" placeholder="생년월일...">
+                                    </div>
+                                    <!-- end section -->
+
+									<label for="phone" class="col-md-2 control-label field-label text-muted fs18 mb10" >휴대폰 : </label>
+                                    <div class="col-md-4">
+                                        <input type="text" name="phone" id="phone" class="gui-input" value="" placeholder="휴대폰...">
+                                        <!-- <label for="lastname" class="field prepend-icon">
+                                            <label for="lastname" class="field-icon">
+                                                <i class="fa fa-user"></i>
+                                            </label>
+                                        </label> -->
+                                    </div>
+                                    <!-- end section -->
+                                </div>
+                                <!-- end .section row section -->
+
+                                <div class="section row">
+                                	<label for="password" class="col-md-2 control-label field-label text-muted fs18 mb10">비밀번호 : </label>
+                                	<div class="col-md-10">
+                                    	<input type="password" name="password" id="password" class="gui-input" placeholder="비밀번호">
+                                    </div>
+                                </div>
+                                <!-- end section -->
+
+                                <div class="section row">
+                                	<label for="confirmPassword" class="col-md-2 control-label field-label text-muted fs14
+                                	 mb10">비밀번호 확인 : </label>
+                                	<div class="col-md-10">
+                                    	<input type="password" name="confirmPassword" id="confirmPassword" class="gui-input" placeholder="비밀번호 확인">
+                                    </div>
+                                </div>
+                                <!-- end section -->
+
+                                <!-- <div class="section-divider mv40">
+                                    <span>Review the Terms</span>
+                                </div> -->
+                                <!-- .section-divider -->
+
+                                <!-- <div class="section mb15">
+                                    <label class="option block">
+                                        <input type="checkbox" name="trial">
+                                        <span class="checkbox"></span>Sign me up for a
+                                        <a href="#" class="theme-link"> 7-day free PRO trial. </a>
+                                    </label>
+                                    <label class="option block mt15">
+                                        <input type="checkbox" name="terms">
+                                        <span class="checkbox"></span>I agree to the
+                                        <a href="#" class="theme-link"> terms of use. </a>
+                                    </label>
+                                </div> -->
+                                <!-- end section -->
+
+                            </div>
+                            <!-- end .form-body section -->
+                            <div class="panel-footer clearfix">
+                                <button type="button" class="button btn-primary pull-right">등록</button>
+                            </div>
+                            <!-- end .form-footer section -->
+                        </form>
+                    </div>
+                </div>
+
+            </section>
+            <!-- End: Content -->
+
+        </section>
+        <!-- End: Content-Wrapper -->
+
+    </div>
+    <!-- End: Main -->
+
+    <!-- BEGIN: PAGE SCRIPTS -->
+
+    <!-- jQuery -->
+    <script src="/js/jquery-3.1.1.min.js"></script>
+	<script src="/js/jquery.mask.js"></script>
+    <script src="/js/jquery-migrate-3.0.0.min.js"></script>
+    <script src="/js/jquery-ui.min.js"></script>
+    <!-- CanvasBG Plugin(creates mousehover effect) -->
+    <script src="/js/canvasbg.js"></script>
+
+    <!-- Theme Javascript -->
+    <script src="/js/utility.js"></script>
+    <script src="/js/demo.js"></script>
+    <script src="/js/main.js"></script>
+
+    <!-- Page Javascript -->
+    <script type="text/javascript">
+    $(document).ready(function() {
+
+        "use strict";
+
+        // Init Theme Core      
+        Core.init();
+
+        // Init Demo JS
+        Demo.init();
+
+        // Init CanvasBG and pass target starting location
+        CanvasBG.init({
+            Loc: {
+                x: window.innerWidth / 2.1,
+                y: window.innerHeight / 4.2
+            },
+        });
+        
+        $("#phone").mask("(999) 9999-9999"); 
+        $("#birthday").mask("9999-99-99"); 
+
+    });
+    </script>
+
+    <!-- END: PAGE SCRIPTS -->
+
+</body>
+
+</html>
